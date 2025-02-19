@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(207, 241, 199);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    color: rgb(10, 20, 10);
+}
+h2 {
+    color: rgb(29, 75, 29);
+}
+p {
+    color: rgb(0, 0, 0);
+}
+button {
+    background-color: rgb(56, 117, 56);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(46, 97, 46);
+}
+header {
+    background-color: rgb(70, 105, 70);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav {
+    background-color: rgb(84, 133, 84);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: rgb(56, 117, 56);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+footer {
+    background-color: rgb(56, 117, 56);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}
+.container {
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}

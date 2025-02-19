@@ -1,0 +1,283 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÇEVKA</title>
+    <style>
+        body {
+            background-color: rgb(207, 241, 199);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        h1 {
+            color: rgb(10, 20, 10);
+        }
+        h2 {
+            color: rgb(29, 75, 29);
+        }
+        p {
+            color: rgb(0, 0, 0);
+        }
+        button {
+            background-color: rgb(56, 117, 56);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(46, 97, 46);
+        }
+        header {
+            background-color: rgb(70, 105, 70);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: rgb(84, 133, 84);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: rgb(56, 117, 56);
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: rgb(56, 117, 56);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>ÇEVKA</h1></header>
+    <nav>
+        <ul>
+            <li><a href="ana_sayfa.html">Anasayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2>Çevre ve Kalkınma Ağı</h2>
+        <p>Çevre ve Kalkınma Ağı (ÇEVKA), çevre sorunlarına dikkat çekmek ve çözüm 
+            önerileri sunmak amacıyla kurulmuş bir sivil toplum kuruluşudur. 
+            ÇEVKA, çevre sorunlarına karşı farkındalık yaratmayı ve sürdürülebilir 
+            yaşamı teşvik etmeyi hedeflemektedir.</p>
+
+        <h2>Bizim Hakkımızda</h2>
+        <p>Çevre ve Kalkınma Ağı (ÇEVKA) olarak, toplumsal sorunlara çözüm üretmeyi, 
+            bilinç oluşturmayı ve ülkemizi daha yaşanabilir bir yer haline getirmeyi 
+            hedefliyoruz.</p>
+        
+        <h2>Hedefimiz</h2>
+        <p>ÇEVKA olarak bu websitesi sayesinde insanlara çevreye karşı çözümler üretmelerini ve
+            bir puanlama sistemi ile bu çözümleri uygulamalarını sağlamayı hedefliyoruz. 
+            Bu sayede çevreye duyarlı bireylerin sayısını artırmayı amaçlıyoruz. 
+            Bu puanlama sistemi ile her ayın sonunda insanlar adına bağış veya ödüller 
+            vermeyi planlıyoruz.</p>
+        <button>Daha Fazla Bilgi</button>
+        
+        <h2>Çevre Sorunları</h2>
+        <p>Çevre sorunları, insanların doğal kaynakları tüketmesi ve çevreyi kirletmesi 
+            sonucunda ortaya çıkar. Bu sorunlar arasında hava kirliliği, su kirliliği, 
+            toprak kirliliği, ormansızlaşma ve iklim değişikliği gibi konular yer alır. 
+            Bu sorunların çözümü için bireysel ve toplumsal olarak bilinçlenmek ve 
+            sürdürülebilir yaşam tarzlarını benimsemek gerekmektedir. Biz ise tam olarak bunu 
+            yapmayı amaçlıyoruz</p>
+
+        <h2>Puanlama Sistemi</h2>
+        <p>Çevreye duyarlı davranışlarınız için puan kazanın!</p>
+        <div id="score-container">
+            <p>Mevcut Puanınız: <span id="score">0</span></p>
+        </div>
+
+        <h3>Giriş Yap</h3>
+        <form id="login-form" class="form-group">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+
+        <h3>Yeni Görev Ekle</h3>
+        <form id="task-form" class="form-group">
+            <label for="task">Görev:</label>
+            <select id="task" name="task">
+                <option value="plantTree">Ağaç Dik (5 Puan)</option>
+                <option value="collectGarbage">Çöp Topla (10 Puan)</option>
+            </select>
+            <label for="evidence">Kanıt (URL):</label>
+            <input type="url" id="evidence" name="evidence" required>
+            <button type="submit">Gönder</button>
+        </form>
+
+        <h3>Onay Bekleyen Görevler</h3>
+        <ul id="pending-tasks"></ul>
+    </div>
+
+    <script>
+        let score = 0;
+        const pendingTasks = [];
+        const adminPassword = "125470"; // şifre 
+        let currentUser = null;
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            currentUser = username;
+            loadUserScore();
+        });
+
+        document.getElementById('task-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const task = document.getElementById('task').value;
+            const evidence = document.getElementById('evidence').value;
+            pendingTasks.push({ task, evidence });
+            updatePendingTasks();
+        });
+
+        function loadUserScore() {
+            const storedScore = localStorage.getItem(currentUser + '_score');
+            if (storedScore !== null) {
+                score = parseInt(storedScore, 10);
+            } else {
+                score = 0;
+            }
+            document.getElementById('score').innerText = score;
+        }
+
+        function saveUserScore() {
+            localStorage.setItem(currentUser + '_score', score);
+        }
+
+        function updatePendingTasks() {
+            const pendingTasksList = document.getElementById('pending-tasks');
+            pendingTasksList.innerHTML = '';
+            pendingTasks.forEach((task, index) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    Gör
+                    ev: ${task.task}, Kanıt: <a href="${task.evidence}" target="_blank">${task.evidence}</a>
+                    <button onclick="approveTask(${index})">Onayla</button>
+                `;
+                pendingTasksList.appendChild(listItem);
+            });
+        }
+
+        function approveTask
+        (index) {
+        const password = prompt("Onaylamak için şifreyi girin:");
+        if (password === adminPassword) {
+            const task = pendingTasks[index];
+            if (task.task === 'plantTree') {
+                score += 5;
+            } else if (task.task === 'collectGarbage') {
+                score += 10;
+            }
+            saveUserScore();
+            document.getElementById('score').innerText = score;
+            pendingTasks.splice(index, 1);
+            updatePendingTasks();
+        } else {
+            alert("Yanlış şifre!");
+
+        }
+    }
+
+    </script>
+ 
+ 
+ <div class="container">
+    <h2>İletişim</h2>
+    <p>Çevre ve Kalkınma Ağı (ÇEVKA) ile iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</p>
+    <form id="contact-form" class="form-group">
+        <label for="name">Ad Soyad:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Gönder</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        alert(`Mesajınız alınmıştır. Teşekkür ederiz, ${name}!`);
+    });
+</script>
+
+    
+    
+        <footer>
+            <p>ÇEVKA &copy; 2025</p>
+        </footer>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+</body>
+</html>
